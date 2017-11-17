@@ -152,6 +152,83 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-淡入淡出js的原生实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/17/淡入淡出js的原生实现/">淡入淡出js的原生实现</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/17/淡入淡出js的原生实现/" class="archive-article-date">
+  	<time datetime="2017-11-17T04:18:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#淡入淡出效果</p>
+<h2 id="js原生实现"><a href="#js原生实现" class="headerlink" title="js原生实现"></a>js原生实现</h2><h3 id="js封装fadeIn-fadeOut-函数的实现"><a href="#js封装fadeIn-fadeOut-函数的实现" class="headerlink" title="js封装fadeIn(),fadeOut()函数的实现"></a>js封装fadeIn(),fadeOut()函数的实现</h3><ul>
+<li>fadeIn()<blockquote>
+<p>将需要淡入的元素在css样式中添加<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">```html</span><br><span class="line">    (function () &#123;</span><br><span class="line">            ele.style.opacity = opa;</span><br><span class="line">            opa = opa +10;</span><br><span class="line">            if(opa &lt;= opacity)&#123;</span><br><span class="line">                setTimeout(arguments.callee,speed);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)();</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>通过<code>arguments.callee</code>实现递归。使得透明度以10为基数增加。</p>
+<ul>
+<li>fadeOut()<br>在js中将需要淡出的元素的style的display更改属性为none.设置隐藏。并不断的将透明度改为0.原理和淡入一样。</li>
+</ul>
+</blockquote>
+<p>源码地址：<a href="https://github.com/special-wen/demo/tree/master/demo_fadeInOut/js%E5%8E%9F%E7%94%9F" target="_blank" rel="external">https://github.com/special-wen/demo/tree/master/demo_fadeInOut/js%E5%8E%9F%E7%94%9F</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/17/淡入淡出js的原生实现/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
     <article id="post-DEMO-表格操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
